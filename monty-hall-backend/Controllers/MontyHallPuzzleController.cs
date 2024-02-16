@@ -8,7 +8,7 @@ namespace monty_hall_backend.Controllers
     [ApiController]
     public class MontyHallPuzzleController : ControllerBase
     {
-        [HttpGet("Simulation/api")]
+        [HttpGet("Simulation/Montyhall")]
         public ActionResult RunSimulation(int simulations, bool changeDoor)
         {
             var simulation = new MontyHallPuzzle(simulations, changeDoor);
