@@ -7,6 +7,10 @@
         private int totalSwitchDoorWins = 0;
         private int totalStayDoorWins = 0;
         private readonly Random random = new Random();
+        private string goatImage = "goat";
+        private string carImage = "car";
+
+
 
         public MontyHallPuzzle(int simulations, bool changeDoor)
         {
@@ -18,9 +22,9 @@
         {
             for (int i = 0; i < simulations; i++)
             {
-                string[] doors = { "goat", "goat", "goat" };
+                string[] doors = { goatImage, goatImage, goatImage };
                 int carIndex = random.Next(0, 3);
-                doors[carIndex] = "car";
+                doors[carIndex] = carImage;
 
                 int initialChoice = random.Next(0, 3);
                 int revealed;
@@ -28,7 +32,7 @@
                 do
                 {
                     revealed = random.Next(0, 3);
-                } while (revealed == initialChoice || doors[revealed] == "car");
+                } while (revealed == initialChoice || doors[revealed] == carImage);
 
                 if (changeDoor)
                 {
@@ -41,7 +45,7 @@
 
         private void UpdateWinCounts(string[] doors, int initialChoice)
         {
-            if (doors[initialChoice] == "car")
+            if (doors[initialChoice] == carImage)
             {
                 if (changeDoor)
                 {
