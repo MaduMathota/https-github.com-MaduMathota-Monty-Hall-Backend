@@ -1,4 +1,4 @@
-﻿namespace MontyHallBackend
+﻿namespace monty_hall_backend.Entity
 {
     public class MontyHallPuzzle
     {

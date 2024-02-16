@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MontyHallBackend;
+using monty_hall_backend.Entity;
 
 
 namespace monty_hall_backend.Controllers
